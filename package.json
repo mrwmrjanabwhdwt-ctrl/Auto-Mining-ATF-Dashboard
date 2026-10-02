@@ -1,0 +1,35 @@
+{
+  "name": "atf-bot-automation",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ATF Telegram Mini-App automation with fresh session-based authentication",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning index.js",
+    "dashboard": "node --disable-warning=ExperimentalWarning index.js --dashboard",
+    "stats": "node --disable-warning=ExperimentalWarning index.js --stats-dashboard",
+    "stats:worker": "node --disable-warning=ExperimentalWarning index.js --stats-worker",
+    "start:run": "node --disable-warning=ExperimentalWarning index.js --run",
+    "register-referral": "node --disable-warning=ExperimentalWarning index.js --register-referral",
+    "replace-wallets": "node --disable-warning=ExperimentalWarning index.js --replace-wallets",
+    "withdraw": "node --disable-warning=ExperimentalWarning index.js --withdraw",
+    "check": "node --check index.js && node --check src/api.js && node --check src/config.js && node --check src/local-turnstile.js && node --check src/multibot.js && node --check src/proxy-health.js && node --check src/referral-state.js && node --check src/tasks.js && node --check src/task-schedule.js && node --check src/telegram.js && node --check src/twocaptcha.js && node --check src/utils.js && node --check src/wallets.js && node --check src/wallet-replacement.js && node --check src/wallet-sync-state.js && node --check src/wallet-worker-pool.js && node --check src/withdraw-proxy-pool.js && node --check src/withdraw.js",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ton/crypto": "^3.3.0",
+    "@ton/core": "^0.63.1",
+    "@ton/ton": "^16.3.0",
+    "acorn": "^8.15.0",
+    "axios": "^1.11.0",
+    "chalk": "^5.6.0",
+    "dotenv": "^17.2.1",
+    "https-proxy-agent": "^7.0.6",
+    "teleproto": "^1.228.5"
+  }
+}

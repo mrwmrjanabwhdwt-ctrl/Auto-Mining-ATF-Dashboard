@@ -1,0 +1,47 @@
+{
+  "telegram": {
+    "session_directory": "session",
+    "account_overrides_file": "account-overrides.json",
+    "wallet_accounts_file": "wallets-accounts.json",
+    "bot_username": "ATF_AIRDROP_bot",
+    "webapp_url": "https://atfminers.asloni.online/miner/index.html",
+    "platform": "android",
+    "start_param": "",
+    "referral_code": "610911604"
+  },
+  "settings": {
+    "api_base_url": "https://atfminers.asloni.online/miner/index.php",
+    "task_source_url": "https://atfminers.asloni.online/miner/index.html",
+    "allowed_hosts": [
+      "atfminers.asloni.online"
+    ],
+    "auto_claim": true,
+    "auto_start_mining": true,
+    "auto_boost": true,
+    "auto_sync_mining_state": true,
+    "task_mode": "claim_ready",
+    "auto_claim_referrals": true,
+    "auto_claim_team_wallet": true,
+    "wallet_busy_retry_seconds": 15,
+    "wallet_busy_max_retries": 1,
+    "wallet_worker_concurrency": 10,
+    "stats_worker_concurrency": 5,
+    "withdraw_captcha_max_attempts": 3,
+    "delay_between_accounts_seconds": {
+      "min": 3,
+      "max": 5
+    },
+    "delay_between_actions_ms": 750,
+    "task_ready_retry_seconds": 60,
+    "dashboard_refresh_interval_minutes": 10,
+    "loop_interval_hours": 3,
+    "empty_account_retry_seconds": 30,
+    "request_timeout_seconds": 20,
+    "max_attempts": 3,
+    "retry_delay_seconds": 2,
+    "max_retry_delay_seconds": 15,
+    "proxy_failure_threshold": 3,
+    "proxy_cooldown_minutes": 30,
+    "log_level": "info"
+  }
+}
