@@ -1,0 +1,30 @@
+name: Run ATF Bot
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start Bot
+      env:
+        TELEGRAM_API_ID: ${{ secrets.TG_API_ID }}
+        TELEGRAM_API_HASH: ${{ secrets.TG_API_HASH }}
+      run: node index.js
