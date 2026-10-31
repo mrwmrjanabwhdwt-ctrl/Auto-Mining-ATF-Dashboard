@@ -1,4 +1,4 @@
-name: Run ATF Bot
+name: Run ATF Bot 24/7
 
 on:
   push:
